@@ -6,5 +6,3 @@ secrets:
     - secretKey: api-token
       remoteRef:
         key: CLOUDFLARE_CLUSTERISSUER_API_TOKEN
-    secretStore: {}
-    secret: {}
