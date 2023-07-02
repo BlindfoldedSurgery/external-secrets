@@ -1,1 +1,10 @@
 namespace: mgmt
+
+secrets:
+  - name: cloudflare-api-token-secret
+    data:
+    - secretKey: api-token
+      remoteRef:
+        key: CLOUDFLARE_CLUSTERISSUER_API_TOKEN
+    secretStore: {}
+    secret: {}
