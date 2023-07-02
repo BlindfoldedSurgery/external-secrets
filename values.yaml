@@ -1,8 +1,23 @@
 namespace: mgmt
 
+stores:
+  - name: mgmt-prod
+    namespace: mgmt
+    token:
+      name: doppler-token-mgmt-prod
+      namespace: mgmt
+
 secrets:
   - name: cloudflare-api-token-secret
     namespace: cert-manager
+    secretStoreName: mgmt-prod
+    data:
+    - secretKey: api-token
+      remoteRef:
+        key: CLOUDFLARE_CLUSTERISSUER_API_TOKEN
+  - name: doppler-token-mgmt-prod
+    namespace: cert-manager
+    secretStoreName: mgmt-prod
     data:
     - secretKey: api-token
       remoteRef:
