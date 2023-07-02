@@ -22,3 +22,10 @@ secrets:
     - secretKey: dopplerToken
       remoteRef:
         key: DOPPLER_TOKEN_MGMT_PROD
+  - name: argocd-repo-creds-ssh-creds
+    namespace: argocd
+    secretStoreName: mgmt-prod
+    data:
+    - secretKey: sshPrivateKey
+      remoteRef:
+        key: ARGOCD_SSH_KEY
