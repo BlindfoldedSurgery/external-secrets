@@ -16,7 +16,7 @@ secrets:
       remoteRef:
         key: CLOUDFLARE_CLUSTERISSUER_API_TOKEN
   - name: doppler-token-mgmt-prod
-    namespace: cert-manager
+    namespace: mgmt
     secretStoreName: mgmt-prod
     data:
     - secretKey: dopplerToken
