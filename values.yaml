@@ -2,6 +2,7 @@ namespace: mgmt
 
 secrets:
   - name: cloudflare-api-token-secret
+    namespace: cert-manager
     data:
     - secretKey: api-token
       remoteRef:
