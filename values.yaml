@@ -29,3 +29,14 @@ secrets:
     - secretKey: sshPrivateKey
       remoteRef:
         key: ARGOCD_SSH_KEY
+  - name: exoscale-sos-secret
+    namespace: longhorn-system
+    secretStoreName: mgmt-prod
+    dataFrom:
+    - find:
+      name:
+        regexp: "EXOSCALE_.*"
+      rewrite:
+      - regexp:
+        source: "EXOSCALE_(.+)"
+        target: "$1"
