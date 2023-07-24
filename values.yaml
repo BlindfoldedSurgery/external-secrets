@@ -34,9 +34,9 @@ secrets:
     secretStoreName: mgmt-prod
     dataFrom:
     - find:
-      name:
-        regexp: "EXOSCALE_.*"
+        name:
+          regexp: "EXOSCALE_.*"
       rewrite:
       - regexp:
-        source: "EXOSCALE_(.+)"
-        target: "$1"
+          source: "EXOSCALE_(.+)"
+          target: "$1"
